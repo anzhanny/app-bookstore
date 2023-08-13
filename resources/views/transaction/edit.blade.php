@@ -57,8 +57,9 @@
                                   <div class="form-group">
                             <label for="status" class="form-label">Status</label>
                             <select class="form-control" name="status" require="required">
-                                <option>Success</option>
-                                <option>failure</option>
+                            <option>--select--</option>
+                                <option>1</option>
+                                <option>0</option>
                             </select>
                             </div>         <!-- /.card-body -->
 

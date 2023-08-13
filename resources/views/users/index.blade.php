@@ -59,7 +59,7 @@
             <td>{{ $users->phone }}</td>
             <td>{{ $users->address }}</td>
             <td>{{ $users->birthday }}</td>
-            <td>{{ $users->is_active }}</td>
+            <td><label class="btn {{( $users->is_active == 1) ? 'btn-success' : 'btn-danger'}}">{{ ($users->is_active ==1) ? 'active' : 'Inactive' }}</label></td>
             <td>{{ $users->role }}</td>
         <td>
             <a class="btn btn-warning" href="/users/{{$users->id}}">edit</a>
@@ -108,10 +108,18 @@
                 <label for="exampleInputEmail1" >Birthday</label>
                 <input type="date" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="exampleInputEmail1" >Is Active</label>
-                <input type="number" name="is_active" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-            </div>
+                <input type="string" name="is_active" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div> -->
+            <div class="form-group">
+                                <label for="exampleInputEmail1" >Is Active</label>
+                                <select name="is_active"class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                  <option>1</option>
+                                  <option>0</option>
+                                </select>
+                              </div>            
+                              <div class="modal-footer">
                 <div class="form-group">
                                 <label for="exampleInputEmail1" >Role</label>
                                 <select name="role"class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" required>

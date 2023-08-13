@@ -39,13 +39,22 @@
                             <label for="birthday" class="form-label">Birthday</label><br>
                             <input type="date" class="form-control" name="birthday" require="required">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                             <label for="is_active" class="form-label">Is Active</label><br>
-                            <input type="number" class="form-control" name="is_active" require="required">
+                            <input type="string" class="form-control" name="is_active" require="required">
+                            </div> -->
+                            <div class="form-group">
+                            <label for="is_active" class="form-label">Is Active</label>
+                            <select class="form-control" name="is_active" require="required">
+                                <option>--select--</option>
+                                <option>1</option>
+                                <option>0</option>
+                            </select>
                             </div>
                                 <div class="form-group">
                             <label for="role" class="form-label">Role</label>
                             <select class="form-control" name="role" require="required">
+                            <option>--select--</option>
                                 <option>admin</option>
                                 <option>seller</option>
                                 <option>buyer</option>

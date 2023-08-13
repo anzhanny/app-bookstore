@@ -28,6 +28,7 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
+
         $buyer_id = $request->input('buyer_id');
         $book_id = $request->input('book_id');
         $payment_method_id = $request->input('payment_method_id');
@@ -47,6 +48,7 @@ class TransactionController extends Controller
         $data->discount =  $discount;
         $data->total_payment = $total_payment;
         $data->status = $status;
+        // $data->status = ($request->status) ?? 1 : 0 ;
         $data->save();
 
         return redirect('/transaction');      
@@ -59,6 +61,7 @@ class TransactionController extends Controller
     {
         //
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -73,7 +76,7 @@ class TransactionController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request,  $id)
-    {
+    {        
         $buyer_id = $request->input('buyer_id');
         $book_id = $request->input('book_id');
         $payment_method_id = $request->input('payment_method_id');
@@ -95,7 +98,13 @@ class TransactionController extends Controller
         $data->status = $status;
         $data->save();
 
-        return redirect('/transaction');     }
+        return redirect('/transaction');     
+    }
+
+    // public function totalpayment(Request $request, $price, $qty, $ppn, $discount)
+    // {
+    //         $total_payment = ($price * $qty) + $ppn - $discount;
+    // }
 
     /**
      * Remove the specified resource from storage.

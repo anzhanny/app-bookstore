@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birthday');
             $table->string('is_active');
+            // $table->string('is_active')->default('1');
             $table->string('role');
             $table->timestamps();
         });

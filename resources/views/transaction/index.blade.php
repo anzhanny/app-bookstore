@@ -71,7 +71,7 @@
                         <td>{{ rupiah($transaction->ppn) }}</td>
                         <td>{{ $transaction->discount }}</td>
                         <td>{{ rupiah($transaction->total_payment) }}</td>
-                        <td>{{ $transaction->status }}</td>
+                        <td><label class="btn {{( $transaction->status == 1) ? 'btn-success' : 'btn-danger'}}">{{ ($transaction->status ==1) ? 'active' : 'Inactive' }}</label></td>
                         <td>
                           <a class="btn btn-warning" href="/transaction/{{$transaction->id}}">edit</a>
                           <a class="btn btn-danger" href="/transaction/delete/{{$transaction->id}}">hapus</a>
@@ -127,8 +127,9 @@
                                 <div class="form-group">
                                 <label for="exampleInputEmail1" >Status</label>
                                 <select name="status"class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                  <option>Success</option>
-                                  <option>failure</option>
+                                <option>--select--</option>
+                                <option>1</option>
+                                <option>0</option>
                                 </select>
                               </div>
                                     <div class="modal-footer">

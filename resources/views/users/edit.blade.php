@@ -47,13 +47,21 @@
                                 <label for="birthday">Birthday</label><br>
                                 <input type="date" class="form-control" name="birthday" required="required"  value="{{ $user->birthday}}">
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                 <label for="is_active">Is Active</label><br>
-                                <input type="number" class="form-control" name="is_active" required="required"  value="{{ $user->is_active}}">                                </div>
-                                <div class="form-group">
+                                <input type="string" class="form-control" name="is_active" required="required"  value="{{ $user->is_active}}">                                </div>
+                                <div class="form-group"> -->
+                                <label for="is_active" class="form-label">Is Active</label>
+                            <select class="form-control" name="is_active" require="required">
+                            <option>--select--</option>
+                                <option>1</option>
+                                <option>0</option>
+                            </select>
+                            </div> 
                             <label for="role" class="form-label">Role</label>
                             <select class="form-control" name="role" require="required">
-                                <option>admin</option>
+                            <option>--select--</option>
+                            <option>admin</option>
                                 <option>seller</option>
                                 <option>buyer</option>
                                 <option>publisher</option>
