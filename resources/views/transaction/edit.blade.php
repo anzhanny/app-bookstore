@@ -27,7 +27,7 @@
                 <div class="card-body">
                 <div class="form-group">
                                 <label for="buyer_id">Buyer Id</label><br>
-                                <input type="text" class="form-control" name="buyer_id" required="required"  value="{{ $transactions->buyer_id}}">
+                                <input type="number" class="form-control" name="buyer_id" required="required"  value="{{ $transactions->buyer_id}}">
                                 </div>
                                 <div class="form-group">
                                 <label for="book_id">Book Id</label><br>
@@ -38,10 +38,10 @@
                                 <input type="number" class="form-control" name="payment_method_id" required="required"  value="{{ $transactions->payment_method_id}}">                                </div>
                                 <div class="form-group">
                                 <label for="qty">QTY</label><br>
-                                <input type="date" class="form-control" name="qty" required="required" value="{{ $transactions->qty}}">
+                                <input type="number" class="form-control" name="qty" required="required" value="{{ $transactions->qty}}">
                                   </div>    
                                   <label for="price">Price</label><br>
-                                <input type="text" class="form-control" name="price" required="required"  value="{{ $transactions->price}}">
+                                <input type="number" class="form-control" name="price" required="required"  value="{{ $transactions->price}}">
                                 </div>
                                 <div class="form-group">
                                 <label for="ppn">PPN</label><br>
@@ -52,12 +52,15 @@
                                 <input type="number" class="form-control" name="discount" required="required"  value="{{ $transactions->discount}}">                                </div>
                                 <div class="form-group">
                                 <label for="total_payment">Total Payment</label><br>
-                                <input type="date" class="form-control" name="total_payment" required="required" value="{{ $transactions->total_payment}}">
-                                  </div>   
+                                <input type="number" class="form-control" name="total_payment" required="required" value="{{ $transactions->total_payment}}">
+                                  </div>    
                                   <div class="form-group">
-                                <label for="published_date">Status</label><br>
-                                <input type="date" class="form-control" name="published_date" required="required" value="{{ $transactions->published_date}}">
-                                  </div>           <!-- /.card-body -->
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-control" name="status" require="required">
+                                <option>Success</option>
+                                <option>failure</option>
+                            </select>
+                            </div>         <!-- /.card-body -->
 
                     <div class="card-footer">
                         <div class="col-12">

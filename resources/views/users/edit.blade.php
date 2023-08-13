@@ -37,8 +37,8 @@
                                 <label for="password">Password</label><br>
                                 <input type="password" class="form-control" name="password" required="required"  value="{{ $user->password}}">                                </div>
                                 <div class="form-group">
-                                <label for="phone">Phone Number</label><br>
-                                <input type="text" class="form-control" name="phone" required="required" value="{{ $user->phone}}">
+                                <label for="phone">Phone</label><br>
+                                <input type="integer" class="form-control" name="phone" required="required" value="{{ $user->phone}}">
                                   </div>    
                                   <label for="address">Address</label><br>
                                 <input type="text" class="form-control" name="address" required="required"  value="{{ $user->address}}">
@@ -49,16 +49,16 @@
                                 </div>
                                 <div class="form-group">
                                 <label for="is_active">Is Active</label><br>
-                                <input type="text" class="form-control" name="is_active" required="required"  value="{{ $user->is_active}}">                                </div>
+                                <input type="number" class="form-control" name="is_active" required="required"  value="{{ $user->is_active}}">                                </div>
                                 <div class="form-group">
-                                <label for="role" class="form-label">Role</label>
-                                <select name="role" class="form-control select2" multiple="">
-                                    <option>Admin</option>
-                                    <option>Seller</option>
-                                    <option>Buyer</option>
-                                    <option>Publisher</option>
-                                </select>
-                                </div>          <!-- /.card-body -->
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-control" name="role" require="required">
+                                <option>admin</option>
+                                <option>seller</option>
+                                <option>buyer</option>
+                                <option>publisher</option>
+                            </select>
+                            </div>           <!-- /.card-body -->
 
                     <div class="card-footer">
                         <div class="col-12">

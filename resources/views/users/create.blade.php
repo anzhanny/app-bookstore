@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                             <label for="phone" class="form-label">Phone</label><br>
-                            <input type="text" class="form-control" name="phone" require="required">
+                            <input type="integer" class="form-control" name="phone" require="required">
                             </div>
                             <div class="form-group">
                             <label for="address" class="form-label">Address</label><br>
@@ -41,18 +41,17 @@
                             </div>
                             <div class="form-group">
                             <label for="is_active" class="form-label">Is Active</label><br>
-                            <input type="text" class="form-control" name="is_active" require="required">
+                            <input type="number" class="form-control" name="is_active" require="required">
                             </div>
-                            <div class="form-group">
-                                <label for="role" class="form-label">Role</label>
                                 <div class="form-group">
-                                <select class="form-control">
-                                    <option>Admin</option>
-                                    <option>Seller</option>
-                                    <option>Buyer</option>
-                                    <option>Publisher</option>
-                                </select>
-                                </div> 
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-control" name="role" require="required">
+                                <option>admin</option>
+                                <option>seller</option>
+                                <option>buyer</option>
+                                <option>publisher</option>
+                            </select>
+                            </div>
                             <div class="card-footer">
                               <div class="col-12">
                               <a a href="/users" class="btn btn-secoundary">back</a>

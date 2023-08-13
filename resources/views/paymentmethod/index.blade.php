@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"> {{$paymentmethods['paymentmethod']}}</h1>
+            <h1 class="m-0"> {{$paymentMethods['paymentMethod']}}</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
 <section class="content">
       <div class="container-fluid">
       <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-paymentmethod">
+      <a href="/add-paymentMethod">
           <i class="fa fa-plus">Add Data paymentmethods</i></a>
       </button>
       @if($errors->any())
@@ -45,15 +45,15 @@
                         <th>Opsi</th>
                       </tr>
                     </thead>
-                    @foreach($paymentmethods as $paymentmethod)
+                    @foreach($paymentMethods as $paymentMethod)
                     <tbody>
                       <tr>
-                        <td>{{ $paymentmethod->name }}</td>
-                        <td>{{ $paymentmethod->account_number }}</td>
-                        <td>{{ $paymentmethod->type }}</td>
+                        <td>{{ $paymentMethod->name }}</td>
+                        <td>{{ $paymentMethod->account_number }}</td>
+                        <td>{{ $paymentMethod->type }}</td>
                         <td>
-                          <a class="far fa-edit" href="/paymentmethod/{{$paymentmethod->id}}"></a>
-                          <a class="fa fa-trash" href="/paymentmethod/delete/{{$paymentmethod->id}}"></a>
+                          <a class="btn btn-warning" href="/paymentMethod/{{$paymentMethod->id}}">edit</a>
+                          <a class="btn btn-danger" href="/paymentMethod/delete/{{$paymentMethod->id}}">Hapus</a>
                         </td>
                       </tr>
                     </tbody>                         
@@ -71,7 +71,7 @@
               </button>
             </div>
             <div class="modal-body">
-            <form action="/add-paymentmethod" method="post">
+            <form action="/add-paymentMethod" method="post">
            {{ csrf_field() }}
 
                                 <div class="form-group">
@@ -88,7 +88,7 @@
                                 </div>
 
            <div class="modal-footer">
-                <a class="btn btn-danger" href="/paymentmethod">back</a>
+                <a class="btn btn-primary" href="/paymentMethod">back</a>
                 <button  class="btn btn-success btn-sm">save</button>
             </div>
             </form>  
@@ -98,7 +98,7 @@
       </div>
       <!-- Close Modal -->
 
-    {{ $paymentmethods->links() }}
+    {{ $paymentMethods->links() }}
     </div>
 
 

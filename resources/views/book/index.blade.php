@@ -54,8 +54,8 @@
                         <td>{{ $book->amount }}</td>
                         <td>{{ $book->published_date }}</td>
                         <td>
-                          <a class="far fa-edit" href="/book/{{$book->id}}"></a>
-                          <a class="fa fa-trash" href="/book/delete/{{$book->id}}"></a>
+                          <a class="btn btn-warning" href="/book/{{$book->id}}">edit</a>
+                          <a class="btn btn-danger" href="/book/delete/{{$book->id}}">hapus</a>
                         </td>
                       </tr>
                     </tbody>                         
@@ -90,7 +90,7 @@
                                 <input type="date" name="published_date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                                   </div>
            <div class="modal-footer">
-                <a class="btn btn-danger" href="/book">back</a>
+                <a class="btn btn-primary" href="/book">back</a>
                 <button  class="btn btn-success btn-sm">save</button>
             </div>
             </form>  

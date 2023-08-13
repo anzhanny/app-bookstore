@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Paymentmethod;
+use App\Models\PaymentMethod;
 use Illuminate\Http\Request;
 
-class PaymentmethodController extends Controller
+class PaymentMethodController extends Controller
 {
-/**
+    /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $paymentmethods = Paymentmethod::paginate(10);
-        return view ('paymentmethod.index', compact('paymentmenthods'));
+        $paymentMethods = PaymentMethod::paginate(10);
+        return view ('paymentMethod.index', compact('paymentMethods'));
     }
 
     /**
@@ -20,7 +20,7 @@ class PaymentmethodController extends Controller
      */
     public function create()
     {
-        return view('paymentmethod.create');
+        return view('paymentMethod.create');
     }
 
     /**
@@ -31,13 +31,13 @@ class PaymentmethodController extends Controller
         $name = $request->input('name');
         $account_number = $request->input('account_number');
         $type = $request->input('type');
-        $data = new Paymentmethod();
+        $data = new PaymentMethod();
         $data->name = $name;
         $data->account_number =  $account_number;
         $data->type =  $type;
         $data->save();
 
-        return redirect('/paymentmethod');      
+        return redirect('/paymentMethod');  
     }
 
     /**
@@ -51,39 +51,35 @@ class PaymentmethodController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit( $id)
+    public function edit(string $id)
     {
-        $paymentmethods = Paymentmethod::find($id);
-        return view ('paymentmethod.edit', compact('paymentmethods'));
-    }
+        $paymentMethods = PaymentMethod::find($id);
+        return view ('paymentMethod.edit', compact('paymentMethods'));    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,  $id)
+    public function update(Request $request, string $id)
     {
         $name = $request->input('name');
         $account_number = $request->input('account_number');
         $type = $request->input('type');
-        $data = Paymentmethod::find($id);
+        $data = PaymentMethod::find($id);
         $data->name = $name;
         $data->account_number = $account_number;
         $data->type = $type;
         $data->save();
 
-        return redirect('/paymentmethod');      
-    }
+        return redirect('/paymentMethod');    }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        ///delete sow
-        $paymentmethods = Paymentmethod::find($id);
-        $paymentmethods->delete();
+        $paymentMethods = PaymentMethod::find($id);
+        $paymentMethods->delete();
         // return response()->json($faculties);
-        return redirect('/paymentmethod');    
+        return redirect('/paymentMethod');  
     }
 }
-

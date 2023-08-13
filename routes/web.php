@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BookController;
-use App\Http\Controllers\PaymentmethodtController;
+use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\TransactionController;
 
 
@@ -41,12 +41,12 @@ Route::get('/book/{id}', [BookController::class, 'edit']);
 Route::patch('/book/update/{id}', [BookController::class,'update']);
 Route::get('/book/delete/{id}', [BookController::class,'destroy']);
 
-Route::get('/paymentmethod',[PaymentmethodController::class,'index']);
-Route::get('/add-paymentmethod', [PaymentmethodController::class, 'create']);
-Route::post('/paymentmethod/store',[PaymentmethodController::class, 'store']);
-Route::get('/paymentmethod/{id}',[PaymentmethodController::class, 'edit']);
-Route::patch('/paymentmethod/update/{id}',[PaymentmethodController::class, 'update']);
-Route::get('/paymentmethod/delete/{id}', [PaymentmethodController::class,'destroy']);
+Route::get('/paymentMethod',[PaymentMethodController::class,'index']);
+Route::get('/add-paymentMethod', [PaymentMethodController::class, 'create']);
+Route::post('/paymentMethod/store',[PaymentMethodController::class, 'store']);
+Route::get('/paymentMethod/{id}',[PaymentMethodController::class, 'edit']);
+Route::patch('/paymentMethod/update/{id}',[PaymentMethodController::class, 'update']);
+Route::get('/paymentMethod/delete/{id}', [PaymentMethodController::class,'destroy']);
 
 Route::get('/transaction',[TransactionController::class,'index']);
 Route::get('/add-transaction', [TransactionController::class, 'create']);

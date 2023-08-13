@@ -8,7 +8,7 @@
 </head>
 <body>
     <center><h3 class="text-center mb-4"> Data paymentmethod</h3></center>
-    <form action="/paymentmethod/store" method="post">
+    <form action="/paymentMethod/store" method="post">
         {{ csrf_field() }}
         <div class="container">
             <div class="row justify-content-center">
@@ -17,7 +17,7 @@
                         <div class="card-body">
                         <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="number" class="form-control" name="name" require="required">
+                        <input type="text" class="form-control" name="name" require="required">
                         </div>
                         <div class="form-group">
                         <label for="account_number" class="form-label">Account Number</label>
@@ -25,12 +25,12 @@
                         </div>
                         <div class="form-group">
                         <label for="type" class="form-label">Type</label>
-                        <input type="number" class="form-control" name="type" require="required">
+                        <input type="text" class="form-control" name="type" require="required">
                         </div>
                        
                             <div class="card-footer">
                               <div class="col-12">
-                              <a a href="/paymentmethod" class="btn btn-secoundary">back</a>
+                              <a a href="/paymentMethod" class="btn btn-secoundary">back</a>
                               <input type="submit" value="Save" class="btn btn-primary float-right">
                               </div>
                            </div>

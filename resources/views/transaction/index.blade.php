@@ -73,8 +73,8 @@
                         <td>{{ rupiah($transaction->total_payment) }}</td>
                         <td>{{ $transaction->status }}</td>
                         <td>
-                          <a class="far fa-edit" href="/transaction/{{$transaction->id}}"></a>
-                          <a class="fa fa-trash" href="/transaction/delete/{{$transaction->id}}"></a>
+                          <a class="btn btn-warning" href="/transaction/{{$transaction->id}}">edit</a>
+                          <a class="btn btn-danger" href="/transaction/delete/{{$transaction->id}}">hapus</a>
                         </td>
                       </tr>
                     </tbody>                         

@@ -11,7 +11,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $user = users::paginate(10);
+        $user = Users::paginate(10);
         return view ('users.index', compact('user'));
     }
 

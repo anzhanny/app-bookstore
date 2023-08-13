@@ -62,8 +62,8 @@
             <td>{{ $users->is_active }}</td>
             <td>{{ $users->role }}</td>
         <td>
-            <a class="far fa-edit" href="/users/{{$users->id}}"></a>
-            <a class="fa fa-trash" href="/users/delete/{{$users->id}}"></a>
+            <a class="btn btn-warning" href="/users/{{$users->id}}">edit</a>
+            <a class="btn btn-danger" href="/users/delete/{{$users->id}}">hapus</a>
         </td>
         </tr>
         </tbody>
@@ -92,18 +92,12 @@
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1" >Password Strength</label>
-                <div class="input-group">
-                <div class="input-group-prepend">
-                <div class="input-group-text">
-                <i class="fas fa-lock"></i>
-                </div>
-                </div>
-                 <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <label for="exampleInputEmail1" >Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1" >Phone</label>
-                <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <input type="integer" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             </div>
             <div class="form-group">
@@ -114,22 +108,20 @@
                 <label for="exampleInputEmail1" >Birthday</label>
                 <input type="date" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
-                <div class="form-group">
-                <label for="exampleInputEmail1" >Is Active</label>
-                <select name="is_active" class="form-control select2" multiple="">
-                    <option>Active</option>
-                    <option>Inactive</option>
-                </select>
             <div class="form-group">
-                <label for="exampleInputEmail1" >Role</label>
-                <select name="role" class="form-control select2" multiple="">
-                    <option>Admin</option>
-                    <option>Seller</option>
-                    <option>Buyer</option>
-                    <option>Publisher</option>
-                </select>
+                <label for="exampleInputEmail1" >Is Active</label>
+                <input type="number" name="is_active" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
-            <div class="modal-footer">
+                <div class="form-group">
+                                <label for="exampleInputEmail1" >Role</label>
+                                <select name="role"class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                  <option>admin</option>
+                                  <option>seller</option>
+                                  <option>buyer</option>
+                                  <option>publisher</option>
+                                </select>
+                              </div>            
+                              <div class="modal-footer">
                 <a class="btn btn-danger" href="/users">back</a>
                 <button  class="btn btn-success btn-sm">save</button>
             </div>
