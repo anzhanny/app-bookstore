@@ -28,9 +28,9 @@ class PaymentmethodController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->input('title');
-        $account_number = $request->input('created_id');
-        $type = $request->input('amount');
+        $name = $request->input('name');
+        $account_number = $request->input('account_number');
+        $type = $request->input('type');
         $data = new Paymentmethod();
         $data->name = $name;
         $data->account_number =  $account_number;
@@ -39,12 +39,6 @@ class PaymentmethodController extends Controller
 
         return redirect('/paymentmethod');      
     }
-
-    public function boot()
-    {
-        Route::middleware('web')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/web.php'));}
 
     /**
      * Display the specified resource.
@@ -59,7 +53,7 @@ class PaymentmethodController extends Controller
      */
     public function edit( $id)
     {
-        $paymentMethods = Paymentmethod::find($id);
+        $paymentmethods = Paymentmethod::find($id);
         return view ('paymentmethod.edit', compact('paymentmethods'));
     }
 
@@ -68,13 +62,13 @@ class PaymentmethodController extends Controller
      */
     public function update(Request $request,  $id)
     {
-        $name = $request->input('title');
-        $account_number = $request->input('created_id');
-        $type = $request->input('amount');
+        $name = $request->input('name');
+        $account_number = $request->input('account_number');
+        $type = $request->input('type');
         $data = Paymentmethod::find($id);
         $data->name = $name;
-        $data->account_number =  $account_number;
-        $data->type =  $type;
+        $data->account_number = $account_number;
+        $data->type = $type;
         $data->save();
 
         return redirect('/paymentmethod');      
@@ -86,8 +80,8 @@ class PaymentmethodController extends Controller
     public function destroy(string $id)
     {
         ///delete sow
-        $paymentMethods = Paymentmethod::find($id);
-        $paymentMethods->delete();
+        $paymentmethods = Paymentmethod::find($id);
+        $paymentmethods->delete();
         // return response()->json($faculties);
         return redirect('/paymentmethod');    
     }

@@ -16,22 +16,43 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                            <label for="title" class="form-label">Title</label><br>
-                            <input type="text" class="form-control" name="title" require="required">
+                            <label for="name" class="form-label">Name</label><br>
+                            <input type="text" class="form-control" name="name" require="required">
                             </div>
                             <div class="form-group">
-                            <label for="creator_id" class="form-label">Creator Id</label><br>
-                            <input type="number" class="form-control" name="creator_id" require="required">
+                            <label for="email" class="form-label">Email</label><br>
+                            <input type="email" class="form-control" name="email" require="required">
                             </div>
                             <div class="form-group">
-                            <label for="amount" class="form-label">Amount</label><br>
-                            <input type="number" class="form-control" name="amount" require="required">
+                            <label for="password" class="form-label">Password</label><br>
+                            <input type="password" class="form-control" name="password" require="required">
                             </div>
                             <div class="form-group">
-                            <label for="published_date" class="form-label">Published Date</label><br>
-                            <input type="date" class="form-control" name="published_date" require="required">
+                            <label for="phone" class="form-label">Phone</label><br>
+                            <input type="text" class="form-control" name="phone" require="required">
                             </div>
-
+                            <div class="form-group">
+                            <label for="address" class="form-label">Address</label><br>
+                            <input type="text" class="form-control" name="address" require="required">
+                            </div>
+                            <div class="form-group">
+                            <label for="birthday" class="form-label">Birthday</label><br>
+                            <input type="date" class="form-control" name="birthday" require="required">
+                            </div>
+                            <div class="form-group">
+                            <label for="is_active" class="form-label">Is Active</label><br>
+                            <input type="text" class="form-control" name="is_active" require="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="form-label">Role</label>
+                                <div class="form-group">
+                                <select class="form-control">
+                                    <option>Admin</option>
+                                    <option>Seller</option>
+                                    <option>Buyer</option>
+                                    <option>Publisher</option>
+                                </select>
+                                </div> 
                             <div class="card-footer">
                               <div class="col-12">
                               <a a href="/users" class="btn btn-secoundary">back</a>

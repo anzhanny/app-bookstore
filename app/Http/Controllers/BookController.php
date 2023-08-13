@@ -29,7 +29,7 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $title = $request->input('title');
-        $creator_id = $request->input('created_id');
+        $creator_id = $request->input('creator_id');
         $amount = $request->input('amount');
         $published_date = $request->input('published_date');
         $data = new Book();
@@ -65,7 +65,7 @@ class BookController extends Controller
     public function update(Request $request,  $id)
     {
         $title = $request->input('title');
-        $creator_id = $request->input('created_id');
+        $creator_id = $request->input('creator_id');
         $amount = $request->input('amount');
         $published_date = $request->input('published_date');
         $data = Book::find($id);

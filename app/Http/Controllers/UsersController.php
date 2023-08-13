@@ -28,17 +28,17 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->input('buyer_id');
-        $email = $request->input('book_id');
-        $password = $request->input('payment_method_id');
-        $phone = $request->input('qty');
-        $address = $request->input('price');
-        $birthday = $request->input('ppn');
-        $is_active = $request->input('discount');
-        $role = $request->input('total_payment');
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $phone = $request->input('phone');
+        $address = $request->input('address');
+        $birthday = $request->input('birthday');
+        $is_active = $request->input('is_active');
+        $role = $request->input('role');
         $data = new Users();
         $data->name = $name;
-        $data->email =  $book_id;
+        $data->email =  $email;
         $data->password =  $password;
         $data->phone = $phone;
         $data->address = $address;
@@ -72,17 +72,17 @@ class UsersController extends Controller
      */
     public function update(Request $request,  $id)
     {
-        $name = $request->input('buyer_id');
-        $email = $request->input('book_id');
-        $password = $request->input('payment_method_id');
-        $phone = $request->input('qty');
-        $address = $request->input('price');
-        $birthday = $request->input('ppn');
-        $is_active = $request->input('discount');
-        $role = $request->input('total_payment');
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $phone = $request->input('phone');
+        $address = $request->input('address');
+        $birthday = $request->input('birthday');
+        $is_active = $request->input('is_active');
+        $role = $request->input('role');
         $data = Users::find($id);
         $data->name = $name;
-        $data->email =  $book_id;
+        $data->email =  $email;
         $data->password =  $password;
         $data->phone = $phone;
         $data->address = $address;
@@ -91,7 +91,7 @@ class UsersController extends Controller
         $data->role = $role;
         $data->save();
 
-        return redirect('/users');        }
+        return redirect('/users');}
 
     /**
      * Remove the specified resource from storage.

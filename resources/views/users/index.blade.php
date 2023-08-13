@@ -101,17 +101,10 @@
                 </div>
                  <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
-            </div>
             <div class="form-group">
-                <label for="exampleInputEmail1" >Phone Number</label>
-                <div class="input-group">
-                <div class="input-group-prepend">
-                 <div class="input-group-text">
-                <i class="fas fa-phone"></i>
-                </div>
-                </div>
+                <label for="exampleInputEmail1" >Phone</label>
                 <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                </div>
+            </div>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1" >Address</label>
