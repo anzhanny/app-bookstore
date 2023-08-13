@@ -11,5 +11,4 @@ class Transaction extends Model
     protected $table = 'transaction';
     protected $fillable = ['buyer_id','book_id','payment_method_id','qty','price','ppn','discount','total_payment','status'];
     protected $dates = ['created_at','updated_at'];
-
 }
